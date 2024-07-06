@@ -1,3 +1,6 @@
 Software Development Life cycle
 
-[Duck Duck Go](https://duckduckgo.com)
+-	**Analysis**
+- **Design**
+-	**Implementation**
+-	**Testing**
