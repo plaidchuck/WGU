@@ -13,3 +13,9 @@ Systems Development Life cycle
 	-	Checks that the program meets the specified goals. Associated with behavorial sequence diagram which shows interaction between software components and order of events.
 
 	Diagrams are not confined to a single cycle. E.g. the Testing cycle can using all of the diagrams to test how all components of program interact with eachother and meet the goals and functionalties of stakeholders and implementers.
+
+	The Analysis cycle can use Use Case and Sequence Diagrams to visualize how users will interact with the program and how the program will operate with software components
+
+	The Design cycle can use the class diagram and sequence diagram to visual the structure of classes and objects within the program and how the will operate.
+
+	
