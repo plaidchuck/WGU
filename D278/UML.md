@@ -16,6 +16,6 @@ Systems Development Life cycle
 
 	The Analysis cycle can use Use Case and Sequence Diagrams to visualize how users will interact with the program and how the program will operate with software components
 
-	The Design cycle can use the class diagram and sequence diagram to visual the structure of classes and objects within the program and how the will operate.
+	The Design cycle can use the class diagram and sequence diagram to visualize the structure of classes and objects within the program and how they will operate.
 
 	
