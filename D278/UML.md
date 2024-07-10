@@ -19,3 +19,4 @@ Systems Development Life cycle
 	The Design cycle can use the class diagram and sequence diagram to visualize the structure of classes and objects within the program and how they will operate.
 
 	
+Passed with 100%. I most likely overstudied by completing many of the labs that weren't necessary. The main objective was to be able to accurately describe output of code snippets.
