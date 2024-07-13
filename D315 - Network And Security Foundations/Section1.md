@@ -1,7 +1,5 @@
 # Section 1 - Networking Concepts
 
-[OSI Model](#OSI)
-
 A network is a collection of devices and their infrastructure in order to share data and resources.
 
 ## Network Devices
@@ -44,64 +42,13 @@ A network is a collection of devices and their infrastructure in order to share 
 
 **Coaxial Cable** - Braided sheath around metal inner conductor. Used with cable and now broadband internet. Using RG-6 connector.
 
-**UTP/STP** - Unshielded and shielded twisted copper. 100m up to max speed except Cat 6 max - 55m.  
-Cat5 - 100MBps 
-Cat5e - 1 GBit
-Cat6 - 10 Gbit
+**UTP/STP** - Unshielded and shielded twisted copper. 100m up to max speed Cat 6A.  Cat5 - 100MBps Cat 5e- 1 GBit
 
 **Fiber Optic** - Single mode: Single signal over longer distances, multi mode: multi signals over shorter distance. Using SC, LC, ST connectors.
 
-**WiFi** - 802.11a 54 Mbps 5Ghz 
-b 11 MBps 2.4GHz  
-g 54Mbps 2.4 GHz  
-n 600 MBps both  
-ac 1300Mbps 5 Ghz  
-ax 9600Mbps both
 
 ## Network Types ##
 
 **Storage Area Network (SAN)** High speed network that separates storage devices into their own LAN area for better security and speed. Provides storage that appears locally attached to end user.  
 
-## Network Commands ##
 
-**Tracert/Traceroute/tracepath - Windows/Linux** - Shows hop to device and between networks to reach IP destination
-
-**ipconfig/ifconfig/ip - Windows/Linux** Shows IP configuration for network device(IP address, gateway, DHCP, subnet mask)
-
-**nslookup/dig Windows/Linux** - Translates DNS Name to IP address and vice versa
-
-**arp** - Address Resolution Protocol - MAC Address to IP tables
-
-**netstat** - Shows active connections based on port and service
-
-**Nmap** - Probes IP addresses and reports on open/closed ports and services.
-
-**route** - Shows routing table information and how the machine accesses other networks via the router. Can be edited/updated.
-
-**ftp/tftp** - tftp using UDP
-
-**whois - Linux Only** -  Shows information about domain registration
-
-**tcpdump** - Packet sniffer application
-
-**finger - Linux** - Provides information for logged in user
-
-**scp - Linux** - Secure Copy. Secure file transfer
-
-**cat** - Allows to create files, view contents or concatenate filers and redirect output
-
-## OSI Model {#OSI}
-
-# Flow of data through model #
-
-Encapsulation/decapsulation. Application layers generate requests, perform encryption/compression, establishes connections (SSL)
-
-Transport breaks data into into segments and determines what service the segment is for
-
-Network layer adds packet header information, source and destination IP address
-
-Data Link adds frame header for destination MAC addresses information
-
-Physical layer sends data as signals, light, etc
-
-## Virtualization ##
