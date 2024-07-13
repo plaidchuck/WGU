@@ -1,6 +1,9 @@
 # Section 1 - Networking Concepts
 
+[Topologies](#topologies)
 [OSI Model](#osi-model)  
+[Network Commands](#network-commands)
+[Cloud Computing](#cloud-computing)
 
 A network is a collection of devices and their infrastructure in order to share data and resources.
 
@@ -103,3 +106,27 @@ Data Link adds frame header for destination MAC addresses information
 Physical layer sends data as signals, light, etc
 
 ## Virtualization 
+
+**Type 1 Hypervisor** - High level of performance, VM at hardware level "Bare metal" that is dedicated to running VMs without OS
+
+**Type 2 Hypervisor** - Software level VM, lower performance as it goes through the software on an OS
+
+## Cloud Computing
+
+**On-Premises** - Traditional physical facility with VMs, from hardware to application to data, no cloud features
+
+**IaaS** - Third party provides provides VM, storage, servers, physical equipment, and security. 
+
+**PaaS** - Third party provides IaaS and OS/middleware, ideal for developers who want to create platforms with already developed tools and developing environment
+
+**SaaS** - Third party provides IaaS, PaaS, and actual application/software that is used. GMail, Office 365
+
+### Clouds
+
+**Public** - Cloud services provided to the public by third party provider. Multi customers share the infrastructure. Examples are AWS, Azure
+
+**Private** - Single organization non-shared cloud infrastructure. An example is a business with multiple office locations having one internal company cloud they share.
+
+**Hybird** - A mix of private and outsourced public cloud environments, limited access. Some parts are still private on premises. 
+
+**Comunity** - A collaborative cloud limiting access to a certain group of interests with some common need. An example would be government law enforcement agencies sharing a cloud for information purposes.
