@@ -1,6 +1,7 @@
 # Section 1 - Networking Concepts
 
-[OSI Model](#osi-model)
+[OSI Model](#osi-model)  
+
 A network is a collection of devices and their infrastructure in order to share data and resources.
 
 ## Network Devices
