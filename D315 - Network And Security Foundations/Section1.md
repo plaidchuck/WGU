@@ -1,9 +1,9 @@
 # Section 1 - Networking Concepts
 
-[Topologies](#topologies)
-[OSI Model](#osi-model)  
-[Network Commands](#network-commands)
-[Cloud Computing](#cloud-computing)
+[Topologies](#topologies)  
+[OSI Model](#osi-model)    
+[Network Commands](#network-commands)    
+[Cloud Computing](#cloud-computing)  
 
 A network is a collection of devices and their infrastructure in order to share data and resources.
 
