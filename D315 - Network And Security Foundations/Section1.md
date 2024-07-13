@@ -1,5 +1,6 @@
 # Section 1 - Networking Concepts
 
+[OSI Model](#osi-model)
 A network is a collection of devices and their infrastructure in order to share data and resources.
 
 ## Network Devices
@@ -30,7 +31,7 @@ A network is a collection of devices and their infrastructure in order to share 
 
 **Mesh Topology** - Offers redundancy via interconnected devices  that allow multiple paths for data transfer. Expensive. For large organizations.
 
-## Network Architecture ##
+## Network Architecture 
 
 **Peer to Peer** - Decentralized where any computer/host can be a client/server, depending on what is required to share data. Does not scale well. Much simpler setup.
 
@@ -38,7 +39,7 @@ A network is a collection of devices and their infrastructure in order to share 
 
 **Infrastructure** - Generally wireless with multiple WAPs
 
-## Transmission Media Types and Connectors ##
+## Transmission Media Types and Connectors 
 
 **Coaxial Cable** - Braided sheath around metal inner conductor. Used with cable and now broadband internet. Using RG-6 connector.
 
@@ -55,11 +56,11 @@ ac 1300Mbps 5 Ghz
 ax 9600Mbps both
 
 
-## Network Types ##
+## Network Types 
 
 **Storage Area Network (SAN)** High speed network that separates storage devices into their own LAN area for better security and speed. Provides storage that appears locally attached to end user.  
 
-## Network Commands ##
+## Network Commands 
 
 Tracert/Traceroute/tracepath - Windows/Linux - Shows hop to device and between networks to reach IP destination
 
@@ -87,7 +88,7 @@ scp - Linux - Secure Copy. Secure file transfer
 
 cat - Allows to create files, view contents or concatenate filers and redirect output
 
-## OSI Model ##
+## OSI Model
 
 Flow of data through model
 Encapsulation/decapsulation. Application layers generate requests, perform encryption/compression, establishes connections (SSL)
@@ -100,4 +101,4 @@ Data Link adds frame header for destination MAC addresses information
 
 Physical layer sends data as signals, light, etc
 
-Virtualization
+## Virtualization 
