@@ -8,12 +8,13 @@
 **Threat** - Something or someone that can exploit the vulnerability, the actor  
 **Attack** - Instance or action of the actor  
 **Risk** - Potential of threat or exploit, what will aftermath of attack be   
+**SpecOps** - Security Options discipline within IT tasked with protecting assets and reducing risk  
 
 ## Vulnerabilities  
 
-### Passwords  
+### Passwords / Poor user security practices 
 
-Weak or simple: Easy to guess(common), or use of brute force(attempts every combination of letters)/dictionary attack software to guess list of common password  
+Weak or simple: Easy to guess(common), or use of brute force(attempts every combination of letters)/dictionary attack software to guess list of common password, users writing passwords down and keeping them on site  
 
 Mitigation is to require stronger passwords, i.e. using longer length, more complex that require combinations of upper/lower case, numbers, and symbols. Also limiting the number of password attempts.  Forcing changing of passwords during regular periods and also making sure previous passwords aren't used too often.  
 
@@ -35,7 +36,15 @@ An exploit or vulnerability that is not known yet(e.g. software recently release
 
 ### Physical Security  
 
-Any type of security measures that prevent a threat to get hands-on with equipment that processes or holds sensitive data.
+Any type of security measures that prevent a threat to get hands-on with equipment that processes or holds sensitive data.  
+
+### Misconfigured Firewall Rules
+
+Firewalls filter incoming/outcoming traffic based on set of rules. Misconfigured or incorrect order rules can cause vulnerabilities.
+
+### Advanced Persistent Threats
+
+Some type of threat, software/malware that remains dormant and undetected in a network, that can become active and cause damage.
 
 ## Penetration Testing Teams / Attacker Types
 
@@ -51,19 +60,21 @@ Any type of security measures that prevent a threat to get hands-on with equipme
 
 **White Hat** - IT pros that specialize in pen testing and ethical hacking in order to consult and help an organization with security.  
 
-**Black Hat** - Attackers with malicious intent when compromising systems, in order to gain some monetary/political goal.  
+**Black Hat** - Attackers with malicious intent when compromising systems, in order to gain some monetary/enterainment/credibility goal.  
 
-**Gray Hat** - Not necessarily malicious intent and may attempt to perform white hat duties, but they are no authorized by companies to due this generally so their actions are technically illegal. May be amateurs and therefore can cause unintended damage and leaks.  
+**Gray Hat** - Not necessarily malicious intent and may attempt to perform white hat duties, but they are not authorized by companies to due this generally so their actions are technically illegal. May be amateurs and therefore can cause unintended damage and leaks.  
 
-**Script Kiddies** - Hack for curiousity or entertainment, have no formal training and general use pre-made scripts or tools.
+**"Script Kiddies"** - Hack for curiousity or entertainment, have no formal training and general use pre-made scripts or tools.
 
 ### Insider Threat  
 
 Disgruntled employee, current employee accidentally introduces exploits.  
 
-**Least Privledge Principal** - Access limits and rights to the minimum level for an employees job or duties.  
+**Least Privledge Principal** - Access limits and rights to the minimum level for an employees job or duties.  Confidentiality issue on CIA triad.  
 
 ### Nation States  
 
 Actors, sponsored or otherwise with malicious intent for industrial espionage, IP theft, infrastructure damage, or poltiical destability.  
+
+## Common threats and attacks
 
