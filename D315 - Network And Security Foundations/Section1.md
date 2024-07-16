@@ -27,7 +27,7 @@ A network is a collection of devices and their infrastructure in order to share 
 
 ### Topologies
 
-**Bus** = Network data carried over common data link, normally one cable with terminations at each end and data only flowing one way. Devices are connected in a line and have to wait their "turn". Half duplex. No switches or routers.
+**Bus** - Network data carried over common data link, normally one cable with terminations at each end and data only flowing one way. Devices are connected in a line and have to wait their "turn". Half duplex. No switches or routers.
 
 **Token Ring** - Daisy changed ring that passes data tokens to each device. Allows devices to gain control of network at fixed time intervals.
 
@@ -52,12 +52,12 @@ A network is a collection of devices and their infrastructure in order to share 
 **Fiber Optic** - Single mode: Single signal over longer distances, multi mode: multi signals over shorter distance. Using SC, LC, ST connectors.
 
 **WiFi** -
-802.11a 54 Mbps 5Ghz 
-b 11 MBps 2.4GHz
-g 54Mbps 2.4 GHz
-n 600 MBps both
-ac 1300Mbps 5 Ghz
-ax 9600Mbps both
+802.11a 54 Mbps 5Ghz  
+b 11 MBps 2.4GHz  
+g 54Mbps 2.4 GHz  
+n 600 MBps both  
+ac 1300Mbps 5 Ghz  
+ax 9600Mbps both  
 
 
 ## Network Types 
@@ -84,7 +84,7 @@ ftp/tftp - tftp using UDP
 
 whois - Linux Only - Shows information about domain registration
 
-tcpdump - Packet sniffer application
+tcpdump - Linux only - Packet sniffer application
 
 finger - Linux - Provides information for logged in user
 
