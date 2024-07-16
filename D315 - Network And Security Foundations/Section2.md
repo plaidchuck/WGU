@@ -120,6 +120,8 @@ A hacker that usually hacks a government system in protest of some new policy or
 
 **Fake Access** - "Evil twin", attacker makes a fake access point that someone inadvertently connects to  
 
+**Rogue Access Point** - May not be necessarily malicious, but is the case of an unauthorized access point being connected to a network which could compromise security later  
+
 ## Risk Mitigation  
 
 Develop response plans before attack happens, using pentesting, fire drills etc.  Run proactive detection software and log review.  Safeguards are for gaps or weaknesses in security, and countermeasures address specific threats or attacks.
