@@ -9,7 +9,7 @@ A network is a collection of devices and their infrastructure in order to share 
 
 ## Network Devices
 
-*+Bridge** - Can be used to segment a network from another, but not smart like a switch. Simply forwards or blocks traffic.  
+**Bridge** - Can be used to segment a network from another, but not smart like a switch. Simply forwards or blocks traffic.  
 
 **Hub** - "Dumb" device that sends traffic to all devices on network on Physical OSI layer. Old, outdated. Still used example: USB hub.
 
