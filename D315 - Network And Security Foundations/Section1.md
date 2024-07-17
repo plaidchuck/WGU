@@ -99,7 +99,7 @@ Encapsulation/decapsulation. Application layers generate requests, perform encry
 
 Transport breaks data into into segments and determines what service the segment is for
 
-Network layer adds packet header information, source and destination IP address
+Network layer adds packet header information, source and destination IP address. Also handles "logical addressing"
 
 Data Link adds frame header for destination MAC addresses information
 

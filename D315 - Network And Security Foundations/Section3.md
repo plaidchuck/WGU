@@ -6,13 +6,21 @@
 
 **Password** - Standards for password complexity, frequency of change, authentication lockout policies.
 
+### IT Policies  
+
 **Acceptable Use Policies** - Guidelines/Rules on using organizations systems, internet browsing at work, consequences for violation  
+
+**Security Awareness Policies** - Sets training policy for all employees in regards to meeting security goals and best practices.  
+
+**Asset Classification/Protection/Management Policy** - Defines how different types of assets should be protected and also sets a hierachy of importance of assets. Also sets how the assets will be managed throughout the IT domain.    
+
+**Policy -> Standard -> Procedures -> Guidelines** Goes from formal high level principles to low level granular instructions to advice and best practices on how to follow all security goals.  
+
+## Security Principles and Best Practices  
 
 **BYOD** - Rules/Guidelines for an employee using their own device for work.  MDM, procedures for lost/stolen device, required software and updates  
 
 **Privacy** - How the organization collects, uses, discloses IP and PII.  Specifies individuals' rights and how the organization complies with regulations and laws.  
-
-## Security Principles and Best Practices  
 
 ### Defense in Depth  
 
@@ -70,4 +78,32 @@ Automatically disallow access by default initially. Every part of the system mus
 ### Elimiate Single Points of Failure  
 
 Can be remediated by examining potential failures during the design.  Putting checks and balances in place to ensure that the entire system does not become compromised even if one component fails.  
+
+## Firewalls  
+
+Firewalls at a minimum can preventing flooding and forced unending loops.  They also support network segmentation to keep traffic from flooding from one network to another.  They use *access control lists* which define the rules normally from top to bottom on using specific protocols or ports.  
+
+**Packet Filtering** - Uses rules/ACLs to decide what traffic is allowed to pass. Has no memory of packets encoutered before, only checks heading for source/destination/protocols used.  
+
+**Stateful Inspection** - Remembers if session has been opened and if a resource in the network initiated that sessoion. Also checks header packet.  
+
+**Application/Proxy firewall** - Acts as a proxy between outside and inside resources to allow even more control on what is sent and received.  Application or Next Gen firewalls can actually open packets and examine data for anything malicious.  
+
+### Firewall Deployment
+
+**Border** - Separate protected network from internet usually right after router.  Normally use either packet filtering or stateful inspection.  Can be used by organizations without any public services so most incoming data can be filter or restricted.  
+
+**DMZ / Screen Subnet** - A semiprivate network that can host services that the public internet can access. Separates public service and access from internal systems and data.  
+
+**Multilayer** - Uses multiple firewalls for different segments of a server, avoids "flat"networks, can even maintain different security levels for different classes of employees.  
+
+**IDS/IPS** - Key differences are that IDS search for an report intrusions, while IPS takes action to mitigate or stop attacks.  Like Firewall can be host or network based.  They can only see what segment they are on,  so they either have to be on each segment or get packets forwarded  to them via via sensors or port mirroring.  IPS has cables physically routed through devices to create choke points.  
+
+## Encryption  
+
+**Symmetric** - Same key for encryption/decryption. Main takeaway is that it can handle large amounts of bulk data. Chief downside is that the key is sent with the data which cna leave it vulnerable to a breach/hack.  
+
+**Asymmetric** - Exclusive key use, i.e. a private key is used with a public key and vice versa only. Data encrypted with someones public key can then be unlocked with private key for high security and confidentiality.  Data encrypted with a private key can then be deencrypted with the public key to confirm who sent the data (certificate). Used in SSL, TSL, and IPSec.  
+
+**Hybrid** Uses assymetric key to encrypt data encrypted already with a symmetric key.  
 
