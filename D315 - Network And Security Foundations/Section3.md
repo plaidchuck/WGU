@@ -107,3 +107,60 @@ Firewalls at a minimum can preventing flooding and forced unending loops.  They 
 
 **Hybrid** Uses assymetric key to encrypt data encrypted already with a symmetric key.  
 
+## Device Hardening  
+
+A combination of procedures to make a network device more resistant to hacks:  
+
+- Change default passwords  
+- Disable guest account  
+- Monitor who has access  
+- Enforce password policy  
+- Disable/remove unnecessary services  
+- Keep software/patches up to date  
+- Only allow changes from trusted network for admin logins   
+- Require encryption when possible  
+- Backup any relevant data  
+- Implement physical security measures  
+- Keep accurate logs of who makes changes on devices  
+
+## Access Control  
+
+Data: Private, Confidential, Internal Use, Public Domain  
+
+Virtual firewalls, VPNS, and IPS/IDS can be used even in cloud environments  
+
+## AAA  
+
+**Authentication** - Popularly used with MFA  
+- Who are you? What do you know? What do you have? Where are you?  
+
+**Authorization** - Permissions for legit user, best to use least priveledge  
+
+**Accounting** - Tracking or logging what users do when accessing a system  
+
+## Access Control Models  
+
+**Discretionary Access Control** - Resource owner decides permissions  
+
+**Role-Based Access Control** - Permissions assigned based on role or job function or groups  
+
+**Rule-Based Access Control** - Permissions allowed or denied based on fixed rules with no exceptions, most common with firewalls that have hard rules on what traffic is allowed  
+
+**Attributed-Based Access Control** - Allows permissions based on attributes at a certain point of time, e.g. using GPS to only allow access when at a work site, or using time to only allow access during work hours.  
+
+**Context-Based Access Control** - Allows permissions based on state of a transaction.  Basically would be an application layer/NGFW that would inspect data and packets and see if the traffic makes sense based on the context of what the system expects and what other packets are being received.  
+
+## Wireless Security  
+
+**Infrastruce mode** - Wireless end devices communicate with wireless router/switch/WAP  
+
+**Ad-hoc** - Usually temporary peer-to-peer network without switch/router  
+
+ ### Wireless Encryption  
+
+ **WEP/WPA** - Oldest and weakest encryption  
+ **WPA2** - Most common in use today, all end devices use same key with central device  
+ **WPA3** - Strongest available but not widely available yet.  Each end device and the central device negotiate one time unique key    
+
+## Security Governance  
+
