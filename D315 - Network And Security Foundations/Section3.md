@@ -142,6 +142,10 @@ Virtual firewalls, VPNS, and IPS/IDS can be used even in cloud environments
 
 **Discretionary Access Control** - Resource owner decides permissions  
 
+**Nondiscretionary Access Control** - Access controls granted and monitor by security team, not the system admin.  
+
+**Mandatory Access Control** - No transfer of permissions, permission is granted based on the sensitivity of resource and security level of user.  
+
 **Role-Based Access Control** - Permissions assigned based on role or job function or groups  
 
 **Rule-Based Access Control** - Permissions allowed or denied based on fixed rules with no exceptions, most common with firewalls that have hard rules on what traffic is allowed  
@@ -152,7 +156,7 @@ Virtual firewalls, VPNS, and IPS/IDS can be used even in cloud environments
 
 ## Wireless Security  
 
-**Infrastruce mode** - Wireless end devices communicate with wireless router/switch/WAP  
+**Infrastructure mode** - Wireless end devices communicate with wireless router/switch/WAP  
 
 **Ad-hoc** - Usually temporary peer-to-peer network without switch/router  
 
@@ -160,7 +164,26 @@ Virtual firewalls, VPNS, and IPS/IDS can be used even in cloud environments
 
  **WEP/WPA** - Oldest and weakest encryption  
  **WPA2** - Most common in use today, all end devices use same key with central device  
- **WPA3** - Strongest available but not widely available yet.  Each end device and the central device negotiate one time unique key    
-
+ **WPA3** - Strongest available but not widely available yet.  Each end device and the central device negotiate one time unique key   
+ 
 ## Security Governance  
 
+### Laws  
+
+**FISMA** - Security controls for federal civlian agencies  
+
+**CIPA** - Children protection, requiring schools and libraries to restrict access to inappropriate content  
+
+**GDPR** - EU law for privacy of data of EU citizens.  Requires disclosure and permission for information collecting, allow users to manage their data including have it removed.  
+
+**PIPEDA** - Canadian privacy law for handling personal information during commercial activities  
+
+- Accountability
+- Purpose  
+- Consent  
+- Collection  
+- Retention and disclosure  
+- Accuracy  
+- Safeguard  
+- Access  
+- Compliance  

@@ -126,6 +126,8 @@ A hacker that usually hacks a government system in protest of some new policy or
 
 **Broken Authentication** - Hack by using brute force/dictionary attack password cracking.  Mitigated by lockout policies, MFA  
 
+**SYN Flood** - "Half-Open": Attacker never finishes SYN three-way handshake.  DoS attack.  
+
 ## Risk Mitigation  
 
 Develop response plans before attack happens, using pentesting, fire drills etc.  Run proactive detection software and log review.  Safeguards are for gaps or weaknesses in security, and countermeasures address specific threats or attacks.
@@ -135,6 +137,7 @@ Develop response plans before attack happens, using pentesting, fire drills etc.
 **Device Hardening** - Making devices as secure as they can be, e.g. not using default passwords, firmware/software updates  
 
 **User Awareness Training** - Training employees on SEO attacks, best practices for phishing/malware avoidance.  
+
 
 ### Handling Risks  
 
