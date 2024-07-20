@@ -90,6 +90,14 @@ Actors, sponsored or otherwise with malicious intent for industrial espionage, I
 ### Hacktivist  
 
 A hacker that usually hacks a government system in protest of some new policy or entity.    
+
+## Purpose of attacks  
+
+- Dos
+- Data modification
+- Data export
+- Launch point for further attacks  
+
 ## Common threats and attacks
 
 **Malware** - A variety of malicious software used to destroy, ransom, steal, or access data. Includes spwyware, ransomware, adware, worms, trojans, viruses, and botnets.  
@@ -104,7 +112,7 @@ A hacker that usually hacks a government system in protest of some new policy or
 
 **Port Scanning** - Using tools (nmap) to find available open hosts and services that can be exploited  
 
-**SQL Injection/ Buffer Overflow** - Through web, inputting SQL commands and executables to gain unintended access and control. Mitigated through better software using input validation. 
+**SQL Injection/ Buffer Overflow** - Through web, inputting SQL commands and executables to gain unintended access and control at application layer. Mitigated through better software using input validation.  
 
 **Spoofing** - Impersonating another person or device to receive confidential information. Commonly used in man-in-the-middle attacks, where a spoof gets between two legitimate entities in order to obtain confidential information.
 
@@ -127,6 +135,8 @@ A hacker that usually hacks a government system in protest of some new policy or
 **Broken Authentication** - Hack by using brute force/dictionary attack password cracking.  Mitigated by lockout policies, MFA  
 
 **SYN Flood** - "Half-Open": Attacker never finishes SYN three-way handshake.  DoS attack.  
+
+**RPC Attack** - Session layer attack based on older OS/application vulnerabilities, mitigated by patched/upgrade management  
 
 ## Risk Mitigation  
 
