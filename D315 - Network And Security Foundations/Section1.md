@@ -70,6 +70,8 @@ ax 9600Mbps both
 
 Tracert/Traceroute/tracepath - Windows/Linux - Shows hop to device and between networks to reach IP destination
 
+pathping - Windows command that basically combines tracert and ping, showing hops and also calculates lag time  
+
 ipconfig/ifconfig/ip - Windows/Linux Shows IP configuration for network device(IP address, gateway, DHCP, subnet mask)
 
 nslookup/dig Windows/Linux - Translates DNS Name to IP address and vice versa
