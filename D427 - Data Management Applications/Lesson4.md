@@ -69,7 +69,7 @@ Attribute cardinality - Attribute is unqiue (1/M) - Max/(Min) (Singular/Plural, 
 
 Entities(Tables) can have subtypes that get broken down from the main supertype.  The supertype keeps attributes common to all of the subtypes.  Optional attributes of a type may signal the need for subtypes.  
 
-**Partition** - A group of mutually exclusive subtypes, do not share instances within the partition.  Partitions correspond to option supertype entity.  E.g., partion of payment card types vs. partion of brands of card types all within a card supertype.  
+**Partition** - A group of mutually exclusive subtypes, do not share instances within the partition.  Partitions correspond to  supertype entity.  E.g., partion of payment card types vs. partion of brands of card types all within a card supertype.  
 
 ## Other model conventions  
 
@@ -80,4 +80,51 @@ Some other synonyms are **subject area** for related entities, and ***independen
 ## Entity implementation and primary keys  
 
 Primary keys should be stable, simple, and usually meaningless.  They obviously need to be unique and not subject to change, staying simple means they generally should be a small enough data type for what is required.  Meaningless means they do not have descriptive information that may change.  
+
+## Relationship implementation and foreign keys  
+
+**Binary 1-N N-1:** The foreign key will usually go on the table with the many relationship.  
+
+**Binary 1-1:** The foreign key can usually go in either side of the relationshop, whatever makes logical human sense.  One guideline you can follow is for the the entity with fewer rows to have the foreign key.  
+
+**Many to Many:** This relationship generally needs to be broken down to an associative entity or intersection table. One strategy for the keys is to have the primary key from the other tables each combine to be a composite key.  They also can act to as the foreign key to the respective table.  
+
+To ensure referential integrity, the foreign keys will usually have ***CASCADE*** and ***RESTRICT*** constraints on them.  
+
+## Attribute implementation  
+
+
+**Plural**: Attributes that start as plural within the initial table columns should be broken out into their own table, which can then have a composite key including a foreign key that links the tables together.  Plural attributes that have a small fixed maximum can remain in the initital table, broken down into their own column, e.g. "MealType1, MealType2, ..."  
+
+
+**Attribute Types** - During analysis phase and into logical design, the attribute types for each attribute are determined and selected for implementation based on the RDMS.  
+
+
+**Attribute Cardinality** - Based on attributes being unique, required, or optional  
+
+They generally relate to the SQL UNIQUE and NOT NULL constraints.  
+
+- Minimum Cardinality of Zero (Not required), NULL values allowed  
+- Max and Min Cardinality of One, generally a PRIMARY KEY as they are unique and cannot be NULL.  
+- Min Cardinality of One, required attribute, so NOT NULL  
+- Max Cardinality of One, each instance must be different, so UNIQUE  
+
+## Normalization  
+
+**Functional Dependency** - Dependence of one column and its values on another.  B -> A read as "A depends on B"  Usually seen as redundancy within a table.  Redundancy for RDs is the idea of repetition of related values within the table. E.g. for two values (1, John Doe) being repeated.  
+
+### First Normal Form  
+
+Non key columns will depend on the defined primary key.  There are no duplicate rows in the table, as the primary key value will be unique from row to row.  Cells do not have mulitple values or types within it.  Not the same as just a relational table, as those can have duplicate rows and no primary key.  Non key columns can also depend on other columns still other than the primary key.  
+
+### Second Normal Form  
+
+All non-key columns depend on the entire primary key if the primary key is a composite one.  e.g. a situation where there is a composite key but a column is depending on just the one key.  Solution would be to break out the problem column into its own entity/table. If a table has a simple single primary key, it is already in second normal form.  
+
+### Third Normal Form  
+
+When all non-key columns depend completely on the primary key.  Again involves breaking out any column that is depending on the non-key column.  Officially defined when a non key column depends on a column that is unique.  
+
+### Boyce-Codd Normal Form  
+
 
