@@ -102,3 +102,13 @@ CALL refresh_summary();
 
 INSERT INTO category_rentals_detail (film_title, category_id, category_name, rental_id, rental_date)
 VALUES ('Hits From Da Bong 2', 1, 'Sports', 9001 , 'August 14, 2024');
+
+SELECT c.name, EXTRACT(MONTH FROM r.rental_date) AS month, COUNT(r.rental_id) AS total_rentals
+FROM category AS c
+INNER JOIN film_category ON c.category_id = film_category.category_id
+INNER JOIN film ON film_category.film_id = film.film_id
+INNER JOIN inventory ON film.film_id = inventory.film_id
+INNER JOIN rental AS r ON inventory.inventory_id = r.inventory_id
+WHERE EXTRACT(MONTH FROM r.rental_date) IN (6, 7, 8)
+GROUP BY c.name, month
+ORDER BY month, total_rentals DESC;
