@@ -1,3 +1,5 @@
+-- B
+
 CREATE OR REPLACE FUNCTION rental_date_format(datetime_of_rental TIMESTAMP)
    RETURNS VARCHAR
    LANGUAGE plpgsql
@@ -5,31 +7,40 @@ AS
 $$
 DECLARE day SMALLINT;
 DECLARE month VARCHAR;
-DECLARE year SMALLINT;
-DECLARE time VARCHAR;
 BEGIN
-	RETURN to_char(datetime_of_rental, 'Mon DD, YYYY HH12:MI AM');
+	SELECT EXTRACT(DAY FROM datetime_of_rental) INTO day;
+	SELECT to_char(datetime_of_rental, 'Mon') INTO month;
+	RETURN CONCAT(month, ' ', day);
 END;
 $$
 
+-- Test function
 SELECT rental_date_format('2011-09-11 22:25:46.996577');
 
+-- C
+
 CREATE TABLE category_rentals_detail (
-	film_title VARCHAR(255),
-	category_id INT,
-	category_name VARCHAR(25),
 	rental_ID INT,
-	rental_date VARCHAR
+	film_title VARCHAR,
+	category_name VARCHAR,
+	rental_date VARCHAR,
+	PRIMARY KEY (rental_id)
 );
 
 CREATE TABLE category_rentals_summary (
-	category_name VARCHAR(25),
-	rentals INT
+	category_name VARCHAR,
+	total_rentals INT
 );
 
+-- Test and confirm datatypes and columns
+SELECT * FROM category_rentals_detail;
+SELECT * FROM category_rentals_summary;
+
+-- D
+
 INSERT INTO category_rentals_detail
-SELECT f.title, c.category_id, c.name,
-r.rental_id, rental_date_format(r.rental_date) AS rental_date
+SELECT DISTINCT r.rental_id, f.title, c.name,
+rental_date_format(r.rental_date) AS rental_date
 FROM category AS c
 INNER JOIN film_category
 ON c.category_id = film_category.category_id
@@ -40,8 +51,15 @@ ON f.film_id = i.film_id
 INNER JOIN rental AS r
 ON i.inventory_id = r.inventory_id
 INNER JOIN payment AS p
-ON r.rental_id = p.rental_id;
+ON r.rental_id = p.rental_id
+WHERE EXTRACT(MONTH FROM r.rental_date) IN (6, 7, 8)
+ORDER BY r.rental_id;
 
+--Test and confirm raw data is loaded into details table properly
+SELECT * FROM category_rentals_detail;
+
+
+-- E
 
 CREATE TRIGGER rentals_summary_trigger
 AFTER INSERT
@@ -57,23 +75,25 @@ $$
 BEGIN
 	DELETE FROM category_rentals_summary;
 	INSERT INTO category_rentals_summary
-	SELECT category_name, COUNT(*) AS total_rentals
+	SELECT category_name, COUNT(rental_id)
 	FROM category_rentals_detail
 	GROUP BY category_name
-	ORDER BY total_rentals DESC
-	LIMIT 5; 
+	ORDER BY COUNT(rental_id) DESC;
 
 	RETURN NEW;
 	
 END;
 $$
 
-SELECT *
-FROM category_rentals_detail
-WHERE rental_id = 6001;
+-- Confirm trigger ran and populated summary tables when details is first
+-- populated and also when new row is inserted in details table
 
-SELECT *
-FROM category_rentals_summary;
+SELECT * FROM category_rentals_summary;
+
+INSERT INTO category_rentals_detail 
+VALUES (1, 'Pish posh', 'Sports', 'Aug 30');
+
+-- F
 
 CREATE OR REPLACE PROCEDURE refresh_summary()
 LANGUAGE plpgsql
@@ -81,9 +101,10 @@ AS
 $$
 BEGIN
 	DELETE FROM category_rentals_detail;
+	DELETE FROM category_rentals_summary;
 	INSERT INTO category_rentals_detail
-SELECT f.title, c.category_id, c.name,
-r.rental_id, rental_date_format(r.rental_date) AS rental_date
+SELECT DISTINCT r.rental_id, f.title, c.name,
+rental_date_format(r.rental_date) AS rental_date
 FROM category AS c
 INNER JOIN film_category
 ON c.category_id = film_category.category_id
@@ -94,21 +115,10 @@ ON f.film_id = i.film_id
 INNER JOIN rental AS r
 ON i.inventory_id = r.inventory_id
 INNER JOIN payment AS p
-ON r.rental_id = p.rental_id;
+ON r.rental_id = p.rental_id
+WHERE EXTRACT(MONTH FROM r.rental_date) IN (6, 7, 8)
+ORDER BY r.rental_id;
 END;
 $$
 
 CALL refresh_summary();
-
-INSERT INTO category_rentals_detail (film_title, category_id, category_name, rental_id, rental_date)
-VALUES ('Hits From Da Bong 2', 1, 'Sports', 9001 , 'August 14, 2024');
-
-SELECT c.name, EXTRACT(MONTH FROM r.rental_date) AS month, COUNT(r.rental_id) AS total_rentals
-FROM category AS c
-INNER JOIN film_category ON c.category_id = film_category.category_id
-INNER JOIN film ON film_category.film_id = film.film_id
-INNER JOIN inventory ON film.film_id = inventory.film_id
-INNER JOIN rental AS r ON inventory.inventory_id = r.inventory_id
-WHERE EXTRACT(MONTH FROM r.rental_date) IN (6, 7, 8)
-GROUP BY c.name, month
-ORDER BY month, total_rentals DESC;
