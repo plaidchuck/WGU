@@ -1,3 +1,5 @@
+-- D326 Advanced Data Management - Gary Chidester
+
 -- B
 
 CREATE OR REPLACE FUNCTION rental_date_format(datetime_of_rental TIMESTAMP)
@@ -14,10 +16,15 @@ BEGIN
 END;
 $$
 
--- Test function
-SELECT rental_date_format('2011-09-11 22:25:46.996577');
+-- Test function of raw TIMESTAMP data
+SELECT rental_date_format('2024-08-17 22:25:46.996577');
+SELECT rental_date_format('2023-12-25 00:01:24.9499');
+
 
 -- C
+
+DROP TABLE IF EXISTS category_rentals_detail;
+DROP TABLE IF EXISTS category_rentals_summary;
 
 CREATE TABLE category_rentals_detail (
 	rental_ID INT,
@@ -88,10 +95,12 @@ $$
 -- Confirm trigger ran and populated summary tables when details is first
 -- populated and also when new row is inserted in details table
 
-SELECT * FROM category_rentals_summary;
 
 INSERT INTO category_rentals_detail 
 VALUES (1, 'Pish posh', 'Sports', 'Aug 30');
+
+SELECT * from category_rentals_detail;
+SELECT * FROM category_rentals_summary;
 
 -- F
 
