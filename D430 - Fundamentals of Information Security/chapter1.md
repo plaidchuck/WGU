@@ -12,7 +12,7 @@ Adds ***Posession of Control, Authenticity, and Utility*** to **CIA** triad.
 
 - **Posession** - A look at the actual physical location of the data in question.  E.g., encrypted data being stolen is a possession issue for the time being rather than confidentiality one.  Can better describe actual incidents.  
 
-- **Authenticity** - Describes whether data is from a proper owner or creator.  Could describe situations like a spoofed email address where the sender is not who you think it is.  Also ties in with ***nonredpuditation*** which can show proof that someone has taken an action even if they later deny it.  
+- **Authenticity** - Describes whether data is from a proper owner or creator.  Could describe situations like a spoofed email address where the sender is not who you think it is.  Also ties in with ***nonredpudiation*** which can show proof that someone has taken an action even if they later deny it.  
 
 - **Utility** - Describes how useful data can be even for someone who is not authorized to have it or use it.  E.g., stolen data that is heavily encrypted would be of low utility to a hacker.  
 
