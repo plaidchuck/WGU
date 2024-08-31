@@ -33,13 +33,23 @@ This is a process of identifying what actual assets you have and how critical th
 Once legitimate risks are identified, mitigation can occur which can be classified as ***physical, logical, and administrative***  
 When an incident happens, there should be a process from preparation to the attack all the way to post-incident which is a debriefing and analysis of the attack for future preparation.  
 
+### Defense in Depth Layers and Defensive Controls  
+
+-	**External Network**:	DMZ, VPN  
+-	**Network Perimeter**:	Firewall, Proxy, Stateful/Circuit Level packet inspection  
+-	**Internal Network**:	IDS/IPS, Firewalls, Audting  
+-	**Host**:	Authentication, IDS/IPS, Antivrus, Logging, Hashing  
+-	**Application**:	Secure by data validation, content filtering, auditing/accountability, vulnerability testing  
+-	**Data**:	Secure by encryption, physical/admin access controls, Backups      
+
+
 ## Exercises  
 
 1.	A vulnerability is some kind of weakness or vector in a defense that can be exploited.  A threat is some type of actor or action thawt can be done to take advantage of the vulnerability.  
 
 2.	Logical controls: DMZ, firewall, password policy, antivirus, IDS, IPS, encryption  
 
-3.  Utility is the part of the Parkerian Hexard thawt applies to how useful the data is to both the organization and even an authorized hacker  
+3.  Utility is the part of the Parkerian Hexard that applies to how useful the data is to both the organization and even an authorized hacker  
 
 4.	Intercetpion is an attack against condifidentiality as it implies the receipt, viewing, or exposure of the confidential data to someone not authorized to access it.  
 
