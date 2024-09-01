@@ -22,6 +22,6 @@
 
 ## Other Notes  
 
--	Hash functions are keyless cryptopraphy that can normally be used to guarante data integrity and authenticity.  Ex: SHA-2 
+-	Hash functions are keyless cryptopraphy that can normally be used to guarante data integrity and authenticity.  Ex: SHA-2, MD5 
 
 -	Certificates use a certificate authority that verifies using personal info and public key information.  PKIs split the process into certificate authorities and registration authorities.  
